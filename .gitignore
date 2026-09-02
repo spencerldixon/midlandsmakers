@@ -41,6 +41,7 @@
 
 # Ignore any DB dumps
 *.sql
+!/db/structure.sql
 *.sqlite
 *.dump
 
