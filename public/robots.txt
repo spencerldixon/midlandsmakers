@@ -1,0 +1,11 @@
+# See https://www.robotstxt.org/robotstxt.html for documentation on how to use the robots.txt file
+#
+# The public directory (/) is fully crawlable. Everything behind sign-in —
+# maker management, account/Devise pages, background job admin — is also
+# marked noindex,nofollow on the page itself (see
+# app/views/shared/_meta_tags.html.erb); the rules below are belt-and-braces
+# for crawlers that don't respect that.
+User-agent: *
+Disallow: /makers
+Disallow: /users/
+Disallow: /jobs

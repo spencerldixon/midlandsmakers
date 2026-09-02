@@ -1,0 +1,7 @@
+<label class="cursor-pointer">
+  <%= check_box_tag "tags[]", tag.name, selected, id: "tag_#{tag.id}", class: "peer sr-only" %>
+  <span class="inline-flex items-center gap-1.5 rounded-full border border-[#182523]/15 bg-white px-3 py-1.5 text-sm font-semibold text-[#182523] transition hover:border-[#ff3d0a] peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-[#008f86] peer-checked:border-[#ff3d0a] peer-checked:bg-[#ff3d0a] peer-checked:text-white peer-checked:[&_span]:text-white/80">
+    <%= tag.name %>
+    <span class="text-xs font-medium tabular-nums text-[#53615e]"><%= tag.taggings_count %></span>
+  </span>
+</label>

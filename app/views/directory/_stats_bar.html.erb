@@ -1,0 +1,19 @@
+<%# Small "N makers / N crafts listed" pill with recent-maker avatars.
+    Rendered twice from _header.html.erb: static above the headline on
+    mobile (where the polaroid photo is hidden), anchored over the polaroid's
+    corner on lg+. `class:` controls display/position per call site. %>
+<% if @recent_makers.any? %>
+  <div class="<%= local_assigns[:class] %> items-center gap-3 rounded-full border border-border bg-card py-2 pl-3 pr-4">
+    <div class="flex -space-x-2" aria-hidden="true">
+      <% @recent_makers.each do |maker| %>
+        <%# See app/views/makers/_maker.html.erb for why sharpen is nested here. %>
+        <%= image_tag maker.image.variant(resize_to_fill: [ 64, 64, { sharpen: false } ]), alt: "", loading: "lazy",
+          class: "size-10 rounded-full border-2 border-card object-cover" %>
+      <% end %>
+    </div>
+    <span class="text-sm font-bold leading-tight">
+      <%= number_with_delimiter(@total_makers) %> makers
+      <span class="block font-medium text-muted-foreground"><%= @available_tags.size %> crafts listed</span>
+    </span>
+  </div>
+<% end %>

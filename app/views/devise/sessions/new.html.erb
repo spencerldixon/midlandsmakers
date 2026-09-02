@@ -1,0 +1,38 @@
+<div class="card">
+  <header>
+    <h2>Login to your account</h2>
+    <p>Enter your details below to login to your account</p>
+  </header>
+  <section>
+    <div class="grid gap-6">
+      <%= form_with model: resource, as: resource_name, url: session_path(resource_name), class: "grid gap-6" do |f| %>
+        <div class="field grid gap-2">
+          <%= f.label :email %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        </div>
+
+        <div class="field grid gap-2">
+          <div class="flex items-center gap-2">
+            <%= f.label :password %>
+          </div>
+          <%= f.password_field :password, autocomplete: "current-password" %>
+        </div>
+
+        <% if devise_mapping.rememberable? %>
+          <div class="field gap-2 flex flex-row items-start justify-between rounded-lg border p-4 shadow-xs">
+            <div class="flex flex-col gap-0.5">
+              <label for="remember-me-switch" class="leading-normal">Remember me</label>
+            </div>
+            <%= f.check_box :remember_me, id: "remember-me-switch", role: "switch" %>
+          </div>
+        <% end %>
+
+        <%= f.submit "Log in", class: "btn w-full" %>
+      <% end %>
+
+      <div class="text-center">
+        <%= render "devise/shared/links" %>
+      </div>
+    </div>
+  </section>
+</div>

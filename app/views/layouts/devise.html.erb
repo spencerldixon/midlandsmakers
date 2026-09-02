@@ -1,0 +1,16 @@
+<% content_for :body do %>
+  <body class="min-h-screen flex flex-col items-center justify-between p-6">
+    <%= render "shared/flash" %>
+
+    <%= link_to root_path, class: "", aria: { label: "Midlands Makers home" } do %>
+      <%= render "shared/logo", class: "h-24 shrink-0 transition-transform hover:-rotate-2" %>
+    <% end %>
+
+    <%= yield %>
+
+    <div class="text-neutral-content">
+    </div>
+  </body>
+<% end %>
+
+<%= render template: "layouts/application" %>

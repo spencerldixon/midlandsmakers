@@ -1,0 +1,80 @@
+<% content_for :title, "Manage makers" %>
+
+<%= render "shared/header", title: "Makers", subtitle: pluralize(@makers.size, "maker") do %>
+  <%= link_to "New maker", new_maker_path, class: "btn" %>
+<% end %>
+
+<% if @makers.any? %>
+  <div class="overflow-x-auto rounded-lg border">
+    <table class="table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Name</th>
+          <th>Status</th>
+          <% if current_user.admin? %>
+            <th>Owner</th>
+          <% end %>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @makers.each do |maker| %>
+          <tr>
+            <td>
+              <% if maker.image.attached? %>
+                <%= image_tag maker.image.variant(resize_to_fill: [ 80, 60, { sharpen: false } ]), class: "rounded-md object-cover" %>
+              <% else %>
+                <div class="flex size-[60px] items-center justify-center rounded-md bg-muted text-lg font-semibold text-muted-foreground/40">
+                  <%= maker.name.first %>
+                </div>
+              <% end %>
+            </td>
+            <td class="font-medium"><%= maker.name %></td>
+            <td>
+              <% if maker.published? %>
+                <span class="badge border-transparent bg-green-100 text-green-800">Published</span>
+              <% elsif maker.pending_approval? %>
+                <span class="badge border-transparent bg-amber-100 text-amber-800">Pending approval</span>
+              <% else %>
+                <span class="badge border-transparent bg-muted text-muted-foreground">Unpublished</span>
+              <% end %>
+            </td>
+            <% if current_user.admin? %>
+              <td><%= maker.user&.email || "" %></td>
+            <% end %>
+            <td>
+              <div class="flex items-center justify-end gap-2">
+                <% if maker.unpublished? %>
+                  <%= button_to "Publish", publish_maker_path(maker), method: :patch, class: "btn-sm-outline" %>
+                <% elsif maker.pending_approval? %>
+                  <% if can? :approve, maker %>
+                    <%= button_to "Approve", approve_maker_path(maker), method: :patch, class: "btn-sm" %>
+                  <% end %>
+                  <%= button_to "Unpublish", unpublish_maker_path(maker), method: :patch, class: "btn-sm-outline" %>
+                <% else %>
+                  <%= button_to "Unpublish", unpublish_maker_path(maker), method: :patch, class: "btn-sm-outline" %>
+                <% end %>
+
+                <%= link_to "Edit", edit_maker_path(maker), class: "btn-sm-outline" %>
+                <%= button_to "Remove", maker_path(maker), method: :delete,
+                      class: "btn-sm-destructive",
+                      form: { data: { turbo_confirm: "Remove #{maker.name} from the directory?" } } %>
+              </div>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+<% else %>
+  <div class="empty">
+    <header>
+      <h3>No makers yet</h3>
+      <p>Add the first one to get the directory started.</p>
+    </header>
+    <footer>
+      <%= link_to "New maker", new_maker_path, class: "btn" %>
+    </footer>
+  </div>
+<% end %>

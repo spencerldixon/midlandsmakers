@@ -1,0 +1,141 @@
+<header class="bg-teal/20">
+  <nav class="" aria-label="Main">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-3 lg:px-8">
+      <%= link_to root_path, class: "mt-6 group inline-flex items-center", aria: { label: "Midlands Makers home" } do %>
+        <%= render "shared/logo", class: "h-24 shrink-0 transition-transform group-hover:-rotate-2" %>
+      <% end %>
+
+      <div class="relative flex items-center gap-3 sm:gap-4">
+        <% if user_signed_in? %>
+          <%= link_to "My listings", makers_path, class: "btn-outline" %>
+        <% else %>
+          <%= link_to "Sign in", new_user_session_path,
+            class: "text-sm font-semibold underline decoration-primary decoration-2 underline-offset-4 transition hover:text-primary" %>
+        <% end %>
+
+        <%= mail_to "MailMidlandsMakers@gmail.com", "Get listed",
+          subject: "Add me to the Midlands Makers directory",
+          class: "btn" %>
+
+        <div class="pointer-events-none absolute right-10 top-full mt-1 hidden w-48 rotate-3 xl:block">
+          <%# Curved-arrow (svgrepo.com) — already points straight up natively. %>
+          <svg aria-hidden="true" viewBox="0 0 352.2 352.2" fill="currentColor" class="ml-auto h-8 w-8 text-teal">
+            <path d="M348.232,100.282c-13.464-32.436-35.496-60.588-45.9-94.86c-1.836-5.508-11.016-7.956-13.464-1.836
+              c-14.688,34.272-36.72,65.484-47.124,101.592c-1.836,6.732,7.344,13.464,12.24,7.344c7.344-9.18,15.912-16.524,24.479-25.092
+              c-1.224,52.632,0,105.264-9.18,157.284c-4.896,28.152-11.628,59.977-31.824,81.396c-24.479,25.704-55.08,2.448-68.544-21.42
+              c-11.628-20.809-31.823-110.772-72.215-79.561c-23.868,18.36-29.988,43.452-37.332,70.992c-1.836,7.956-4.896,15.3-8.568,22.032
+              c-14.076,26.316-32.436-16.524-33.048-26.928c-1.224-20.809,4.896-42.229,9.792-62.424c1.836-6.12-7.344-8.568-9.792-2.448
+              c-11.016,28.764-26.316,77.724,0,102.815c23.256,21.42,42.84,7.345,52.02-17.748c6.12-16.523,29.376-108.323,56.304-65.483
+              c17.748,28.151,22.644,61.812,44.064,88.128c15.3,18.359,42.84,22.644,64.26,13.464c25.704-11.628,36.72-45.9,43.452-70.38
+              c16.523-61.2,16.523-127.296,14.688-190.332c14.688,9.792,31.212,18.972,47.736,25.092
+              C347.008,113.746,350.681,105.178,348.232,100.282z M268.672,78.25c7.956-17.136,17.748-34.272,26.316-51.408
+              c9.18,21.42,20.808,40.392,31.824,61.2c-12.853-7.956-25.092-17.136-39.168-18.972c-3.061-0.612-5.509,1.224-6.732,3.672
+              C276.628,73.354,272.345,75.19,268.672,78.25z"/>
+          </svg>
+          <p class="font-handwritten -mt-1 text-xl leading-tight text-teal">
+            Want to be added to our directory + found by market organisers?
+          </p>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="relative z-10 mx-auto grid max-w-7xl items-center gap-12 px-6 pb-14 pt-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:px-8 lg:pb-20 lg:pt-16">
+    <div class="max-w-xl">
+      <%= render "directory/stats_bar", class: "inline-flex lg:hidden" %>
+
+      <h1 class="mt-5 text-balance text-5xl font-semibold leading-[1.02] tracking-[-0.04em] sm:text-6xl lg:text-[4.5rem]">
+        Meet your next
+        <span class="text-orange">favourite maker</span>
+      </h1>
+
+      <p class="mt-5 max-w-lg text-xl">
+      Discover independent artists, designers and craftspeople creating brilliant things across the Midlands, UK.
+      They are contactable via instagram/email for work or events.
+      </p>
+
+      <%= form_with url: root_path,
+        method: :get,
+        class: "mt-8",
+        html: { role: "search" },
+        data: {
+          controller: "maker-search",
+          action: "input->maker-search#search submit->maker-search#submit",
+          maker_search_delay_value: 250,
+          turbo_frame: "makers_results",
+          turbo_action: "replace"
+        } do |form| %>
+        <%= form.label :q, "Search by maker or craft", class: "label text-lg mb-4 block" %>
+
+        <div class="input-group h-14 rounded-full border-transparent bg-card px-1 ring-1 ring-border">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-12">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+          </svg>
+
+          <%= form.search_field :q,
+            value: @query,
+            placeholder: "Try ceramics, Leicester or jewellery…",
+            autocomplete: "off",
+            class: "text-base",
+            data: {
+              maker_search_target: "query",
+              action: "keydown.esc->maker-search#clearQuery"
+            } %>
+
+          <button type="button"
+            data-align="end"
+            class="btn-icon-ghost mr-1 rounded-full text-muted-foreground"
+            data-maker-search-target="reset"
+            data-action="maker-search#clearQuery"
+            hidden>
+            <span class="sr-only">Clear search text</span>
+            <svg aria-hidden="true" class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 6 6 18M6 6l12 12"></path>
+            </svg>
+          </button>
+
+          <%= form.button "Search", type: "submit", class: "btn rounded-full p-4 cursor-pointer", data: { align: "end" } %>
+        </div>
+
+        <fieldset class="mt-6">
+          <div class="mt-2.5 flex flex-wrap items-center gap-2">
+            <% @available_tags.each do |tag| %>
+              <%= render "directory/tag_filter", tag: tag, selected: @selected_tags.include?(tag.name) %>
+            <% end %>
+          </div>
+        </fieldset>
+
+        <div class="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground">
+          <button type="button"
+            class="font-semibold text-primary underline decoration-2 underline-offset-4 cursor-pointer"
+            data-maker-search-target="clear"
+            data-action="maker-search#clearTags"
+            <%= "hidden" if @selected_tags.none? %>>
+            Clear crafts
+          </button>
+
+          <button type="button"
+            class="font-semibold underline decoration-2 underline-offset-4 cursor-pointer"
+            data-maker-search-target="resetAll"
+            data-action="maker-search#clearAll"
+            <%= "hidden" if @query.blank? && @selected_tags.none? %>>
+            Reset everything
+          </button>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="relative mx-auto hidden w-full max-w-md pb-10 lg:block lg:max-w-lg lg:justify-self-end">
+      <div aria-hidden="true" class="absolute -bottom-6 -left-8 size-32 rounded-full bg-secondary"></div>
+      <div aria-hidden="true" class="absolute -inset-2 -rotate-3 rounded-[2.25rem] bg-primary"></div>
+
+      <div class="relative rotate-2 rounded-[2rem] border-[10px] border-card bg-card shadow-2xl">
+        <%= image_tag "midlands-makers-artwork.jpg",
+          alt: "Hand-painted Midlands Makers lettering on a paint-splattered studio bench, surrounded by brushes and jars",
+          class: "aspect-square w-full rounded-[1.25rem] object-cover" %>
+    </div>
+
+      <%= render "directory/stats_bar", class: "absolute -bottom-2 left-2 hidden lg:flex sm:left-6" %>
+    </div>
+  </div>
+</header>

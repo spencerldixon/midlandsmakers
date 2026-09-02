@@ -1,0 +1,301 @@
+- name: Fleur + Rebelle
+  category: Florist
+  description: Creative floral design studio in Nuneaton offering workshops and wedding flowers.
+  image_url: "https://static.wixstatic.com/media/56905d_2c26271b297648b4b188d57aeebef7f7~mv2.jpg/v1/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_4787.jpg"
+  instagram_url: "https://www.instagram.com/fleurandrebelle/"
+
+- name: Bitsy's Emporium of Awesome
+  category: Baked goods
+  description: Leicester bakery creating colourful cakes and bakes for its shop, markets and events.
+  image_url: "https://static.wixstatic.com/media/56905d_03256c830abc4cc494507038a3e96003~mv2.jpg/v1/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/E957B229-4970-4EEA-A6C2-0CC18011D858.jpg"
+  instagram_url: "https://www.instagram.com/bitsysemporium/"
+
+- name: Thread Famous
+  category: Pins and apparel
+  description: Leicester brand making pop-culture enamel pins, scarves, socks and clothing for adults and children.
+  image_url: "https://static.wixstatic.com/media/56905d_bc846c941815455597b3e081454abe52~mv2.png/v1/fill/w_403,h_334,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202023-06-01%20at%2021_52_00.png"
+  instagram_url: "https://www.instagram.com/threadfamous/"
+
+- name: Myfanwy Davies
+  category: Illustrator
+  description: Mixed-media and digital illustration exploring nature, wildlife and sustainability.
+  image_url: "https://static.wixstatic.com/media/56905d_fbd3fe84a6c24ddf856128e13fcffc88~mv2.jpg/v1/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5114_edited.jpg"
+  instagram_url: "https://www.instagram.com/mdavies.illustration/"
+
+- name: The Stringer Edit
+  category: Accessories
+  description: Small-batch gifts and accessories handmade with bold prints and colour in Leicester.
+  image_url: "https://static.wixstatic.com/media/56905d_90045790b40b464ab681b0c801d32c04~mv2.jpg/v1/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5121.jpg"
+  instagram_url: "https://www.instagram.com/thestringeredit/"
+
+- name: Silly Girl Club
+  category: Sustainable fashion
+  description: Playful ethical clothing and accessories made from repurposed bed sheets.
+  image_url: "https://static.wixstatic.com/media/56905d_bb457c6421d14e2a9d70d3f548f442a2~mv2.jpeg/v1/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/3%20Babes%20Dresses.jpeg"
+  instagram_url: "https://www.instagram.com/sillygirlclub"
+
+- name: Dipstick Store
+  category: Kawaii jewellery
+  description: Pastel acrylic jewellery, mirrors and playful accessories handmade by Ellie in Lincoln.
+  image_url: "https://static.wixstatic.com/media/56905d_3287535ba0cf476ea1edabc07341786f~mv2.jpg/v1/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_6209.jpg"
+  instagram_url: "https://instagram.com/dipstick_store"
+
+- name: Only Enso
+  category: Candles
+  description: Japanese-inspired vegan soy candles hand-poured in Birmingham.
+  image_url: "https://static.wixstatic.com/media/56905d_2c1fd9b5c50d4c1aa8f736283d053d1f~mv2.jpg/v1/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5117.jpg"
+  instagram_url: "https://www.instagram.com/only.enso/"
+
+- name: Ceri Shannon
+  category: Screen-printed illustration
+  description: Bright screen-printed artwork and framed prints produced in a Northampton studio.
+  image_url: "https://static.wixstatic.com/media/56905d_30c1a0cc19d94173afc3bde20ce791e4~mv2.jpg/v1/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5125.jpg"
+  instagram_url: "https://www.instagram.com/ceri.shannon/"
+
+- name: Farrow + Rose
+  category: Homeware and jewellery
+  description: Statement concrete jewellery, candles and vases handmade in Rutland.
+  image_url: "https://static.wixstatic.com/media/56905d_aacc3b30d5d44ca3a10e0c76d3593f5f~mv2.jpg/v1/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_6179.jpg"
+  instagram_url: "https://www.instagram.com/farrowandrose/"
+
+- name: Rose of Laurel
+  category: Plant-based bakery
+  description: Family-run Leicester bakery producing small-batch vegan cakes with organic spelt flour.
+  image_url: "https://static.wixstatic.com/media/56905d_1085df3c936e460aae56652e4092a378~mv2.jpg/v1/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_0641%203.jpg"
+  instagram_url: "https://www.instagram.com/roseoflaurel/"
+
+- name: VAE Candles
+  category: Candles
+  description: Vegan soy candles combining premium fragrance oils with semi-precious stones.
+  image_url: "https://static.wixstatic.com/media/56905d_0da8b20d998f4aa8ab4504f71da5f996~mv2.png/v1/fill/w_403,h_334,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202023-09-14%20at%2019_12_04.png"
+  instagram_url: "https://www.instagram.com/vae.candles/"
+  website_url: "https://www.etsy.com/uk/shop/vaecandles"
+
+- name: Atelier Anda
+  category: Minimalist homeware
+  description: Concrete and jesmonite homeware influenced by calm Scandinavian design.
+  image_url: "https://static.wixstatic.com/media/56905d_e9c4254b8c3b4772ac7be9dd7dd09095~mv2.png/v1/fill/w_403,h_334,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202023-09-14%20at%2020_edited.png"
+  instagram_url: "https://www.instagram.com/atelier.anda/"
+  website_url: "https://www.atelieranda.com/"
+
+- name: Kind of Simple
+  category: Prints and cards
+  description: Made-to-order typography prints and cards designed in Lincolnshire with minimal waste.
+  image_url: "https://static.wixstatic.com/media/56905d_4640f710855546e9af7644a8f590cb98~mv2.jpg/v1/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_0659.jpg"
+  instagram_url: "https://www.instagram.com/kindofsimpledesigns/"
+
+- name: Stitch Ambition
+  category: Embroidery
+  description: Birmingham studio creating embroidery commissions, downloadable patterns and custom kits.
+  image_url: "https://static.wixstatic.com/media/56905d_911e032e089a4a37a2200fc5e3d9ff02~mv2.webp/v1/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/image00001_a0be3bf0-8b6b-430b-b9bb-552c281f2f90_900x.webp"
+  instagram_url: "https://www.instagram.com/stitchambition/"
+
+- name: Groves Candles
+  category: Candles
+  description: Refillable, vegan and zero-waste candles hand-poured in contemporary reusable vessels.
+  image_url: "https://static.wixstatic.com/media/56905d_00c4fd94960a4ae3a6274f95ac8d67d3~mv2.webp/v1/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_4910%202_WEBP.webp"
+  instagram_url: "https://www.instagram.com/grovescandles/"
+
+- name: The Wild Patch
+  category: Illustration and workshops
+  description: Nature-inspired illustration and creative workshops based in Northamptonshire.
+  image_url: "https://static.wixstatic.com/media/56905d_463dea09dcde4869b9f1dd7e9e4509cc~mv2.jpg/v1/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_6150.jpg"
+  instagram_url: "https://www.instagram.com/the.wild.patch/"
+
+- name: Alice Joanie
+  category: Illustration and ceramics
+  description: Bespoke illustration, custom typography, contemporary design and small ceramic animals.
+  image_url: "https://static.wixstatic.com/media/56905d_3a6e1561f9734aba9c7e60f42c82848b~mv2.png/v1/fill/w_403,h_334,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202023-09-14%20at%2020_42_29.png"
+  instagram_url: "https://www.instagram.com/alicejoanie/"
+
+- name: Luce Eps
+  category: Digital illustration
+  description: Characterful pet portraits and animal illustrations for prints, mugs, bags and commissions.
+  image_url: "https://static.wixstatic.com/media/56905d_03d259f18a764ac28f42abea38c8f211~mv2.jpg/v1/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_6137.jpg"
+  instagram_url: "https://instagram.com/luce.eps"
+
+- name: Debra Nelson
+  category: Art direction and design
+  description: Birmingham multidisciplinary designer working across illustration, stationery and web design.
+  image_url: "https://static.wixstatic.com/media/56905d_3f571bc9b0a3469fa2a1946bd6167836~mv2.jpg/v1/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_4912.jpg"
+  instagram_url: "https://www.instagram.com/debranelson_design/"
+
+- name: Fire Eater Letterpress
+  category: Letterpress printing
+  description: Saltby printshop offering letterpress workshops, wedding stationery and art prints.
+  image_url: "https://static.wixstatic.com/media/56905d_824571873e1843ccb698da2e850a69ef~mv2.jpeg/v1/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/ireater.jpeg"
+  instagram_url: "https://www.instagram.com/fireaterletterpress/"
+
+- name: Crafted in Chaos
+  category: Homeware
+  description: Colourful, spooky homeware and decorative frames created by Meg.
+  image_url: "https://static.wixstatic.com/media/56905d_2d2bb08928da48ae9da91ae16873ebf9~mv2.jpg/v1/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_4928.jpg"
+  instagram_url: "https://www.instagram.com/_craftedinchaos/"
+
+- name: Nina Sweeney
+  category: Illustrator
+  description: Midlands illustrator whose client work includes Nike, Lucy & Yak and WooWoo.
+  image_url: "https://static.wixstatic.com/media/56905d_d2e265714cf84bd08031f8719f21eb8c~mv2.webp/v1/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/NINA.webp"
+  instagram_url: "https://www.instagram.com/ninasweeney/"
+
+- name: Hannah Dolden
+  category: Textile design
+  description: Award-winning Leicestershire textiles handmade from cotton and lambswool for retail and wholesale.
+  image_url: "https://static.wixstatic.com/media/56905d_f0f1c3b2bb794d19b93f9f8ecb8f673a~mv2.jpg/v1/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_6177_JPG.jpg"
+
+- name: Hallo Ceramics
+  category: Ceramic jewellery and homeware
+  description: Expressive, playful ceramic jewellery and homeware handmade by Heather.
+  image_url: "https://static.wixstatic.com/media/56905d_c2f399e5e41842ea9aa810b1fd1adc83~mv2.jpg/v1/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_6200.jpg"
+
+- name: Soap + Pepper
+  category: Natural soap
+  description: Plastic-free, palm-oil-free soaps designed and handmade in Leicestershire.
+  image_url: "https://static.wixstatic.com/media/56905d_393e4b551a0c4e348a3b710069bea101~mv2.jpg/v1/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_6133.jpg"
+
+- name: Tessie
+  category: Clothing and loungewear
+  description: Independently made women's sleepwear designed for comfort, sustainability and responsible UK production.
+  image_url: "https://static.wixstatic.com/media/56905d_3c44aa6008ec4af4bcd683a6eb10f820~mv2.webp/v1/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Tessie.webp"
+
+- name: Maxene Brown
+  category: Illustration and pottery
+  description: Birmingham illustrator and potter creating story-led cards, ceramics and prints.
+  image_url: "https://static.wixstatic.com/media/56905d_b39a800b0c514d8d82ce78d5f1e723bd~mv2.jpg/v1/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5120_edited.jpg"
+
+- name: Handmade by Hettie
+  category: Sustainable jewellery
+  description: Leicester silversmith making bespoke, small-batch jewellery from recycled silver and sea glass.
+  image_url: "https://static.wixstatic.com/media/56905d_4f01d2e78a0b4383a732a6e6128e991d~mv2.jpg/v1/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_6213.jpg"
+  instagram_url: "https://instagram.com/handmade_by_hettie"
+
+- name: No Basic Bombshell
+  category: Statement jewellery
+  description: Bold Birmingham jewellery designed to empower, worn by customers around the world.
+  image_url: "https://static.wixstatic.com/media/56905d_5a3044b63ad843b8ae977a18fc134ede~mv2.jpg/v1/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/NBB_edited.jpg"
+  instagram_url: "https://www.instagram.com/nobasicbombshell/"
+
+- name: Dutch Wolf
+  category: Reworked clothing
+  description: Durable unisex clothing for adults and children reworked from military surplus in Leicestershire.
+  image_url: "https://static.wixstatic.com/media/56905d_7adc21f4ec584877bfa3dae2e8e97c20~mv2.jpg/v1/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_6120.jpg"
+  instagram_url: "https://www.instagram.com/dutchwolf_/"
+
+- name: Kitsch Illustrator
+  category: Illustrator
+  description: Staffordshire illustrator Bex creates pastel artwork inspired by cats and playful character design.
+  image_url: "https://static.wixstatic.com/media/56905d_78c585f1ad5d4c27a29bae9e9efeba73~mv2.jpg/v1/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_6136.jpg"
+  instagram_url: "https://www.instagram.com/kitschillustration/"
+
+- name: Ichiban
+  category: Car accessories and decals
+  description: Midlands studio making Japanese car-culture stickers, decals and custom JDM accessories.
+  image_url: "https://static.wixstatic.com/media/56905d_7c5ff924d3ca43419b5124c5465c52c0~mv2.jpg/v1/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/FCE10E39-2885-4BD0-A67A-F8660D93879D_JPG.jpg"
+  instagram_url: "https://www.instagram.com/ichibandecals/"
+
+- name: Blume Ceramics
+  category: Stoneware ceramics
+  description: Nature-inspired stoneware pieces hand-built, glazed and fired in Worcestershire.
+  image_url: "https://static.wixstatic.com/media/56905d_76d7e36e87ae48348e02eba7b8d647da~mv2.jpg/v1/crop/x_0,y_138,w_480,h_398/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_8938_JPG.jpg"
+  instagram_url: "https://www.instagram.com/blumeceramics"
+  website_url: "https://www.blumeceramics.co.uk/"
+
+- name: Wear It Quirky
+  category: Handmade jewellery
+  description: Bold mixed-media jewellery and accessories handmade in Stoke-on-Trent.
+  image_url: "https://static.wixstatic.com/media/56905d_ca744423f673402ba4d4cf5e4b5b1527~mv2.jpg/v1/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_0663.jpg"
+
+- name: Tink Jewellery
+  category: Handmade jewellery
+  description: Clay and crystal jewellery handmade in Leicester.
+  image_url: "https://static.wixstatic.com/media/56905d_dbbdeb3ad76248a6abd276a8044eea2a~mv2.jpg/v1/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_0672.jpg"
+  instagram_url: "https://www.instagram.com/tinkjewelleryuk/"
+
+- name: Isabelle Lingerie
+  category: Handmade lingerie
+  description: Luxury lingerie handcrafted in the Midlands with custom and deadstock-material options.
+  image_url: "https://static.wixstatic.com/media/56905d_d1a0ca8af2954710a1ced7b916a945bc~mv2.jpg/v1/crop/x_0,y_242,w_828,h_686/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_6141.jpg"
+  instagram_url: "https://www.instagram.com/isabellelingerieuk/"
+
+- name: Lesser Than Three
+  category: Sign painting
+  description: Nottingham sign painter Lorna specialises in hand-lettered shop windows and frontages.
+  image_url: "https://static.wixstatic.com/media/56905d_5f2e34d5b8ed4fb2b43867a25f486f1e~mv2.png/v1/fill/w_403,h_334,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202023-05-22%20at%2023_35_08.png"
+  instagram_url: "https://www.instagram.com/lesser_than_three/"
+
+- name: Ellastrated
+  category: Illustrator
+  description: Playful Midlands illustration for clients including the BBC and United Nations.
+  image_url: "https://static.wixstatic.com/media/56905d_11a7d915ecc745678acf0664efb61543~mv2.webp/v1/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Ellastrated.webp"
+  instagram_url: "https://www.instagram.com/Ellastrated/"
+
+- name: Daze Made
+  category: Homeware and clothing
+  description: Illustrated clothing and homeware screen-printed on demand to reduce waste.
+  image_url: "https://static.wixstatic.com/media/56905d_92d0aeb77d61477db5650170174626ba~mv2.webp/v1/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_6217_WEBP.webp"
+  instagram_url: "https://instagram.com/daze.made"
+  website_url: "https://www.dazemade.co.uk/"
+
+- name: Mukka Chunks
+  category: Brooches and accessories
+  description: Rachael handmakes characterful brooches in her Leicestershire garden studio.
+  image_url: "https://static.wixstatic.com/media/56905d_3a7a41c04bd94945898f20191e365566~mv2.jpg/v1/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_6215.jpg"
+  instagram_url: "https://instagram.com/mukkachunks"
+
+- name: Amy Lenton
+  category: Artist and illustrator
+  description: Pen, watercolour and pencil illustrations connecting people with natural and urban places.
+  image_url: "https://static.wixstatic.com/media/56905d_a1783850bed940f29a8b0247c4dae735~mv2.jpg/v1/crop/x_0,y_219,w_500,h_414/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_6220_JPG.jpg"
+
+- name: Ricky Joyce Art
+  category: Artist and illustrator
+  description: Leicester artist making paintings, prints, sculpture, jewellery, pins and small art objects.
+  image_url: "https://static.wixstatic.com/media/56905d_402683290fd24b9fa9bf7ec465a07cca~mv2.jpg/v1/crop/x_0,y_127,w_828,h_686/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_0058.jpg"
+  instagram_url: "https://www.instagram.com/rickyjoyceart"
+
+- name: Bonita Keay
+  category: Jewellery and workshops
+  description: Crystal jewellery designer hosting creative wellbeing workshops for adults and children.
+  image_url: "https://static.wixstatic.com/media/56905d_1640271900b442a6b7a3f796dcb49e00~mv2.webp/v1/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/FullSizeRender_52dd0f15-adf7-4314-9e3e-89a0d749b583_1296x.webp"
+  instagram_url: "https://www.instagram.com/bonitakeay/"
+
+- name: Joury
+  category: Sustainable fashion
+  description: Slow-fashion clothing designed to support women through changing stages of life.
+  image_url: "https://static.wixstatic.com/media/56905d_97b2171776174274963c5e4a16eeb933~mv2.jpg/v1/crop/x_0,y_39,w_880,h_729/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202025-10-20%20at%2009_59_edited.jpg"
+  instagram_url: "https://www.instagram.com/ourjournyuk"
+
+- name: Herbal Happiness
+  category: Wellness
+  description: Family-run aromatherapy maker producing plant-based oils, balms and massage bars.
+  image_url: "https://static.wixstatic.com/media/56905d_1dda7ed8016c47e1b5c365eec4eff538~mv2.webp/v1/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/pulse-point-roller-blend-dream-easy_img1.webp"
+  instagram_url: "https://www.instagram.com/herbalhappiness__/"
+
+- name: Fawn with the Wind
+  category: Plushies and sewing patterns
+  description: Handmade plush characters and sewing patterns for creating your own at home.
+  image_url: "https://static.wixstatic.com/media/56905d_8f4ee260844a4a9d9e876335ed33fe78~mv2.png/v1/crop/x_0,y_67,w_1236,h_1024/fill/w_403,h_334,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202025-10-20%20at%2009_46_36.png"
+  instagram_url: "https://www.instagram.com/fawn_withthewind/"
+
+- name: Ode to a Flower
+  category: Artist and illustrator
+  description: Independent Midlands art and illustration featured in the makers directory.
+  image_url: "https://static.wixstatic.com/media/56905d_3e41cce2a6da4c96865288ffc3ba3d9e~mv2.jpg/v1/crop/x_0,y_97,w_828,h_686/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_6223.jpg"
+
+- name: Khulelo
+  category: Sustainable accessories
+  description: Colourful statement accessories made from reclaimed materials as an alternative to mass production.
+  image_url: "https://static.wixstatic.com/media/56905d_c6f22e7e1362407498cf31228e8ac606~mv2.jpg/v1/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_0665.jpg"
+  instagram_url: "https://instagram.com/khulelo"
+
+- name: The Soap Sisters
+  category: Soap and home fragrance
+  description: Birmingham mother-and-daughter business making vegan bath, body and home-fragrance products.
+  image_url: "https://static.wixstatic.com/media/56905d_822828d817fb4b3cb90430b82ede3d9e~mv2.jpg/v1/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_0661.jpg"
+  instagram_url: "https://instagram.com/thesoapsistersco"
+  website_url: "https://www.thesoapsisters.co.uk/"
+
+- name: Creations by Kree
+  category: Dog accessories
+  description: Small-batch dog accessories handmade in a Leicestershire studio, including personalised pieces.
+  image_url: "https://static.wixstatic.com/media/56905d_89aa163577ca401b8784c6a705415410~mv2.jpg/v1/fill/w_403,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/60CFF8A0-5486-4CC2-83A4-A7DDBC90479D.jpg"

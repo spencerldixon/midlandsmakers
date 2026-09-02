@@ -1,0 +1,62 @@
+<div class="card">
+  <header>
+    <h2>Sign up</h2>
+    <p>Create a new account
+  </header>
+  <section>
+    <div class="grid gap-6">
+      <%= form_with model: resource, as: resource_name, url: registration_path(resource_name), class: "grid gap-6" do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
+
+        <div class="grid grid-cols-2 gap-6">
+          <div class="field grid gap-2">
+            <%= f.label :first_name %>
+            <%= f.text_field :first_name, autofocus: true, autocomplete: "given-name" %>
+          </div>
+
+          <div class="field grid gap-2">
+            <%= f.label :last_name %>
+            <%= f.text_field :last_name, autofocus: true, autocomplete: "family-name" %>
+          </div>
+        </div>
+
+        <div class="field grid gap-2">
+          <%= f.label :email %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        </div>
+
+        <div class="field grid gap-2">
+          <div class="flex justify-between items-center">
+            <%= f.label :password %>
+            <% if @minimum_password_length %>
+              <em class="text-xs">(<%= @minimum_password_length %> characters minimum)</em>
+            <% end %>
+          </div>
+
+          <%= f.password_field :password, autocomplete: "new-password" %>
+        </div>
+
+        <div class="field grid gap-2">
+          <%= f.label :password_confirmation %>
+          <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+        </div>
+
+        <div class="field gap-2 flex flex-row items-start justify-between rounded-lg border p-4 shadow-xs">
+          <div class="flex flex-col gap-0.5">
+            <label for="tac-switch" class="leading-normal">Terms and conditions</label>
+            <p class="text-muted-foreground text-sm">
+            I have read and agree to the <%= link_to "terms of use", "https://getvigil.co.uk/terms", class: "underline" %> and <%= link_to "privacy policy", "https://getvigil.co.uk/privacy", class: "underline" %>
+            </p>
+          </div>
+          <%= f.check_box :terms_and_conditions, id: "tac-switch", role: "switch" %>
+        </div>
+
+        <%= f.submit "Sign up", class: "btn" %>
+      <% end %>
+
+      <div class="text-center">
+        <%= render "devise/shared/links" %>
+      </div>
+    </div>
+  </section>
+</div>

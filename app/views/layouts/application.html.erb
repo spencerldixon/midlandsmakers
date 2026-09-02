@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%# noindex: signed-in app pages and Devise auth pages (this layout is
+        shared by both — see layouts/devise.html.erb) have nothing for a
+        search engine to index and shouldn't turn up in results. %>
+    <%= render "shared/meta_tags",
+          title: content_for(:title) || "Midlands Makers | Midlands Makers Directory",
+          description: "Sign in to manage your Midlands Makers directory listing.",
+          noindex: true %>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Midlandsmakers">
+    <meta name="mobile-web-app-capable" content="yes">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= yield :head %>
+
+    <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
+    <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
+
+    <%# Includes all stylesheet files in app/assets/stylesheets %>
+    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+      <%= render "shared/analytics" %>
+    <%= javascript_importmap_tags %>
+</head>
+
+  <% if content_for?(:body) %>
+    <%= yield(:body) %>
+  <% else %>
+    <body>
+      <%= render "shared/flash" %>
+
+      <main id="content">
+        <%= render "shared/navbar" %>
+
+        <div class="p-4 md:p-6 xl:p-12">
+          <main class="mx-auto w-full max-w-screen-lg gap-10">
+            <%= yield %>
+          </main>
+        </div>
+      </main>
+    </body>
+  <% end %>
+</html>

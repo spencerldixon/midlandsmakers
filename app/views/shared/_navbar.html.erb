@@ -1,0 +1,43 @@
+<header class="bg-background sticky inset-x-0 top-0 isolate flex shrink-0 items-center gap-2 z-10 my-12 container mx-auto">
+  <div class="grid grid-cols-3 w-full items-center">
+    <div class="">
+    </div>
+
+    <div class="flex justify-center">
+      <%= link_to root_path, class: "", aria: { label: "Midlands Makers home" } do %>
+        <%= render "shared/logo", class: "h-24 shrink-0 transition-transform group-hover:-rotate-2" %>
+      <% end %>
+    </div>
+
+    <div class="flex items-center justify-end gap-2">
+      <div id="user-menu" class="dropdown-menu">
+        <button type="button"
+                id="user-menu-trigger"
+                aria-haspopup="menu"
+                aria-controls="user-menu-menu"
+                aria-expanded="false"
+                class="btn-ghost inline-flex items-center gap-1.5 text-sm font-medium">
+          <%= current_user.email %>
+          <svg aria-hidden="true" class="size-4 text-muted-foreground" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="m6 9 6 6 6-6"/>
+          </svg>
+        </button>
+        <div id="user-menu-popover" data-popover aria-hidden="true" class="min-w-44" data-side="bottom" data-align="end">
+          <div role="menu" id="user-menu-menu" aria-labelledby="user-menu-trigger">
+            <%= link_to makers_path, role: "menuitem", class: "cursor-pointer" do %>
+              <%= current_user.admin? ? "Manage makers" : "My listing" %>
+            <% end %>
+            <hr role="separator" />
+
+            <%= link_to edit_user_registration_path, role: "menuitem", class: "cursor-pointer" do %>
+              Account settings
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+      <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "btn-ghost text-sm font-medium" %>
+    </div>
+
+  </div>
+</header>

@@ -1,0 +1,81 @@
+@import "tailwindcss";
+@import "basecoat-css";
+@import "basecoat-css/compat";
+@import "./slimselect.css";
+
+/* Literal brand colours, independent of the semantic primary/secondary
+   tokens below. Bare (unsuffixed) so they don't collide with Tailwind's
+   built-in numbered orange and teal scales: use bg-orange, text-teal,
+   border-orange, etc. Global rather than scoped to .directory-theme since
+   nothing outside the directory uses them. */
+@theme {
+  --color-orange: #ff3d0a;
+  --color-teal: #008f86;
+  --font-handwritten: "Caveat", cursive;
+}
+
+/* Tailwind only emits utilities it sees referenced in scanned templates, so
+   without a usage anywhere these tokens would compile to nothing. Force the
+   common variants into existence so they're ready to use immediately. */
+@source inline("{bg,text,border,ring,decoration,fill,stroke,accent,caret,outline,divide}-{orange,teal}");
+
+/* Brand theme, scoped to the public directory so the admin UI keeps basecoat
+   defaults. Overriding the tokens means .btn / .badge / .card / .input-group
+   come out in brand colours without per-element overrides. */
+.directory-theme {
+  /* Tailwind resolves --color-* against :root, so the scoped override has to
+     target --color-* directly (setting --primary here would never be read). */
+  --color-background: #f4ecdf;
+  --color-foreground: #182523;
+  --color-card: #ffffff;
+  --color-card-foreground: #182523;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #182523;
+  --color-primary: #ff3d0a;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #008f86;
+  --color-secondary-foreground: #ffffff;
+  --color-muted: #eae0cf;
+  --color-muted-foreground: #5b6764;
+  --color-accent: #008f86;
+  --color-accent-foreground: #ffffff;
+  --color-border: rgb(24 37 35 / 12%);
+  --color-input: rgb(24 37 35 / 14%);
+  --color-ring: #008f86;
+}
+
+/* Intersecting wavy lines — Temani Afif, css-pattern.com. Covers the whole
+   header; alpha kept low so it sits behind the headline and search field. */
+.wavy-pattern {
+  --s: 11px;
+  --c1: rgb(255 61 10 / 14%);
+  --g: #0000 66%, var(--c1) 68% 98%, #0000;
+  background-image:
+    radial-gradient(30% 30% at 0% 30%, var(--g)),
+    radial-gradient(30% 30% at 100% 30%, var(--g)),
+    radial-gradient(30% 30% at 30% 100%, var(--g)),
+    radial-gradient(30% 30% at 30% 0%, var(--g));
+  background-position:
+    var(--s) calc(9 * var(--s)),
+    var(--s) calc(-1 * var(--s)),
+    calc(10 * var(--s)) 0,
+    0 0;
+  background-size: calc(20 * var(--s)) calc(20 * var(--s));
+}
+
+.flash {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  width: fit-content;
+  z-index: 50;
+  animation: wiggle 0.5s ease-in-out;
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  20% { transform: rotate(-2deg); }
+  40% { transform: rotate(2deg); }
+  60% { transform: rotate(-2deg); }
+  80% { transform: rotate(2deg); }
+}

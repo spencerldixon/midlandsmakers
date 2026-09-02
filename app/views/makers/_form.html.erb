@@ -1,0 +1,17 @@
+<%= form_with model: maker, class: "max-w-xl space-y-5" do |form| %>
+  <%= render "shared/maker_form_fields", form: form, maker: maker %>
+
+  <% if current_user.admin? %>
+    <div class="field">
+      <%= form.label :user_id, "Owner", class: "label" %>
+      <%= form.collection_select :user_id, @assignable_users, :id, :email,
+            { include_blank: "No account (managed by admin only)" }, class: "select" %>
+      <p class="text-xs text-muted-foreground">Lets that person sign in and edit this profile themselves.</p>
+    </div>
+  <% end %>
+
+  <div class="flex items-center gap-3">
+    <%= form.submit maker.new_record? ? "Add maker" : "Save changes", class: "btn" %>
+    <%= link_to "Cancel", makers_path, class: "btn-ghost" %>
+  </div>
+<% end %>

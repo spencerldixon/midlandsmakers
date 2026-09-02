@@ -1,0 +1,34 @@
+<%# Locals: title, description (both required), image_path (asset path,
+    optional — omit to skip the image tags), noindex (Boolean, default false).
+    Rendered from both layouts/directory.html.erb (public, indexable) and
+    layouts/application.html.erb (signed-in app + Devise, noindex: true). %>
+<title><%= title %></title>
+<meta name="description" content="<%= description %>">
+<link rel="canonical" href="<%= request.original_url.split("?").first %>">
+
+<% if local_assigns[:noindex] %>
+  <meta name="robots" content="noindex, nofollow">
+<% end %>
+
+<%# Photo-crop favicon, matching midlandsmakers.co.uk's own approach (their
+    favicon is the same "MIDLANDS MAKERS" studio shot, square-cropped) rather
+    than a separate icon design — see public/icon.png. %>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/icon.png" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<meta property="og:site_name" content="Midlands Makers Directory">
+<meta property="og:type" content="website">
+<meta property="og:title" content="<%= title %>">
+<meta property="og:description" content="<%= description %>">
+<meta property="og:url" content="<%= request.original_url %>">
+<% if local_assigns[:image_path] %>
+  <meta property="og:image" content="<%= image_url(image_path) %>">
+<% end %>
+
+<meta name="twitter:card" content="<%= local_assigns[:image_path] ? "summary_large_image" : "summary" %>">
+<meta name="twitter:title" content="<%= title %>">
+<meta name="twitter:description" content="<%= description %>">
+<% if local_assigns[:image_path] %>
+  <meta name="twitter:image" content="<%= image_url(image_path) %>">
+<% end %>
