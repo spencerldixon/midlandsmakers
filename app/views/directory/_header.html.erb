@@ -8,16 +8,13 @@
       <div class="relative flex items-center gap-3 sm:gap-4">
         <% if user_signed_in? %>
           <%= link_to "My listings", makers_path, class: "btn-outline" %>
-        <% else %>
-          <%= link_to "Sign in", new_user_session_path,
-            class: "text-sm font-semibold underline decoration-primary decoration-2 underline-offset-4 transition hover:text-primary" %>
         <% end %>
 
         <%= mail_to "MailMidlandsMakers@gmail.com", "Get listed",
           subject: "Add me to the Midlands Makers directory",
           class: "btn" %>
 
-        <div class="pointer-events-none absolute right-10 top-full mt-1 hidden w-48 rotate-3 xl:block">
+        <div class="pointer-events-none absolute right-10 top-full mt-1 w-48 rotate-3">
           <%# Curved-arrow (svgrepo.com) — already points straight up natively. %>
           <svg aria-hidden="true" viewBox="0 0 352.2 352.2" fill="currentColor" class="ml-auto h-8 w-8 text-teal">
             <path d="M348.232,100.282c-13.464-32.436-35.496-60.588-45.9-94.86c-1.836-5.508-11.016-7.956-13.464-1.836
@@ -42,7 +39,7 @@
 
   <div class="relative z-10 mx-auto grid max-w-7xl items-center gap-12 px-6 pb-14 pt-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:px-8 lg:pb-20 lg:pt-16">
     <div class="max-w-xl">
-      <%= render "directory/stats_bar", class: "inline-flex lg:hidden" %>
+      <%= render "directory/stats_bar", class: "mt-8 inline-flex lg:hidden lg:mt-0" %>
 
       <h1 class="mt-5 text-balance text-5xl font-semibold leading-[1.02] tracking-[-0.04em] sm:text-6xl lg:text-[4.5rem]">
         Meet your next
@@ -62,8 +59,7 @@
           controller: "maker-search",
           action: "input->maker-search#search submit->maker-search#submit",
           maker_search_delay_value: 250,
-          turbo_frame: "makers_results",
-          turbo_action: "replace"
+          turbo_stream: true
         } do |form| %>
         <%= form.label :q, "Search by maker or craft", class: "label text-lg mb-4 block" %>
 
@@ -93,8 +89,6 @@
               <path d="M18 6 6 18M6 6l12 12"></path>
             </svg>
           </button>
-
-          <%= form.button "Search", type: "submit", class: "btn rounded-full p-4 cursor-pointer", data: { align: "end" } %>
         </div>
 
         <fieldset class="mt-6">

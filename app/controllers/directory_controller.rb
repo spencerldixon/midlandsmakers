@@ -16,7 +16,7 @@ class DirectoryController < ApplicationController
     @recent_makers = published_makers.joins(:image_attachment).order(created_at: :desc).limit(5)
 
     @makers = published_makers.full_text_search(@query)
-    @makers = @makers.tagged_with(@selected_tags, on: :tags) if @selected_tags.any?
+    @makers = @makers.tagged_with(@selected_tags, on: :tags, any: true) if @selected_tags.any?
     @makers = @makers.order(:name) if @query.blank?
     @makers = @makers.includes(:tags)
 
