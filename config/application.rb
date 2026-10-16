@@ -1,6 +1,16 @@
 require_relative "boot"
 
-require "rails/all"
+require "rails"
+# Pick the frameworks you want. Action Cable, Action Text and Action Mailbox
+# are left out to keep memory down; nothing in the app uses them.
+require "active_model/railtie"
+require "active_job/railtie"
+require "active_record/railtie"
+require "active_storage/engine"
+require "action_controller/railtie"
+require "action_mailer/railtie"
+require "action_view/railtie"
+require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -55,8 +65,6 @@ module Midlandsmakers
         enable_starttls_auto: true
       }
     end
-
-    config.mission_control.jobs.http_basic_auth_enabled = false
 
     # Kill switch for new sign-ups (existing users can still sign in) — see
     # Users::RegistrationsController. Defaults to open; set
