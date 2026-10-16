@@ -19,7 +19,7 @@ class DirectoryControllerTest < ActionDispatch::IntegrationTest
     get root_url
 
     assert_response :success
-    assert_select "form[role=search][data-controller=maker-search][data-turbo-frame=makers_results]"
+    assert_select "form[role=search][data-controller=maker-search][data-turbo-stream=true]"
     assert_select "turbo-frame#makers_results"
     assert_select "article", count: 2
     assert_select "h3", text: "Clay Studio"
@@ -39,16 +39,29 @@ class DirectoryControllerTest < ActionDispatch::IntegrationTest
     assert_select "meta[name='twitter:card'][content='summary_large_image']"
   end
 
-  test "filters by one or more category tags" do
+  test "filters by any of the selected category tags" do
     create_maker(name: "Clay Jewels", category: "Ceramic jewellery")
+    create_maker(name: "Paper Press", category: "Letterpress")
 
     get root_url(tags: [ "Ceramics", "Jewellery" ])
 
     assert_response :success
     assert_select "input[name='tags[]'][value='Ceramics'][checked]"
     assert_select "input[name='tags[]'][value='Jewellery'][checked]"
-    assert_select "article", count: 1
+    assert_select "article", count: 3
+    assert_select "h3", text: "Clay Studio"
+    assert_select "h3", text: "Silver Works"
     assert_select "h3", text: "Clay Jewels"
+    assert_select "h3", text: "Paper Press", count: 0
+  end
+
+  test "updates the results frame over a Turbo Stream" do
+    get root_url(q: "ceram"), as: :turbo_stream
+
+    assert_response :success
+    assert_select "turbo-stream[action=update][target=makers_results]"
+    assert_includes response.body, "Clay Studio"
+    assert_not_includes response.body, "Silver Works"
   end
 
   test "filters cards with full text search" do

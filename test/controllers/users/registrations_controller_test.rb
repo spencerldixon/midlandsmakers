@@ -2,8 +2,10 @@ require "test_helper"
 
 class Users::RegistrationsControllerTest < ActionDispatch::IntegrationTest
   test "allows sign-up when registration is enabled" do
-    get new_user_registration_url
-    assert_response :success
+    with_registration_enabled(true) do
+      get new_user_registration_url
+      assert_response :success
+    end
   end
 
   test "blocks sign-up when registration is disabled" do
